@@ -1,0 +1,145 @@
+===Banco de dados controledestoque
+
+== Estrutura para tabela fabricante
+
+|------
+|Coluna|Tipo|Nulo|Padrão
+|------
+|//**idFabricante**//|int(11)|Não|
+|NomeFabricante|varchar(75)|Não|
+|CNPJFabricante|varchar(75)|Não|
+|EmailFabricante|varchar(75)|Não|
+|EndereçoFabricante|varchar(75)|Não|
+|TelefoneFabricante|varchar(75)|Não|
+|Usuario_idUser|int(11)|Não|
+== Despejando dados para a tabela fabricante
+
+|1|Pague Menos|06626253000151|sac@paguemenos.com.br|R. Sen. Pompeu, 1520|4002-8282|1
+|326526542|ProHospital|09.485.574/0001-71|sac@shoppingprohospital.com.br|Rua Capitão Hugo Bezerra, 181 - Barroso|85 3452-5777|1
+|326526543|JBFarma|20.301.535/0001-00|comercial@jbfarma.com.br|R. João Crispim, 1393 - Paupina|85 3295-8481|1
+|326526544|Distrimedica|16.902.612/0001-00|distrimedica@distrimedica.com.br|Rachel de Queiroz, Fortaleza|85 3099-4959|1
+|326526545|RepiFarma|35.230.010/0002-89|repifarma@hotmail.com|Rua Monsenhor Salazar, 90 - São João do Tauape|85 98169 8803|1
+|326526546|TsFarma| 21.189.554/0001-59|atendimento@tsdistribuidora.com.br|Rua Manoel Arruda, 90 - Messejana|85 3048.7300|1
+|326526547|Drogasil|61.585.865/0001-51|atendimento@drogasil.com.br|Av. Santos Dumont, 1261 - Aldeota|3004-8007|1
+|326526548|X-Medcal|13.737.194/0001-54|contato@xmedical.com.br|Av. Ministro José Américo, 700 - Jardim Iracema|85 3393-9542|1
+|326526549|Odonto Medic LTDA|40.050.589/0001-57|odontomedicfornecimentos@gmail.com|Av. Washington Soares, 3663 - WSTC - Edson Queiroz|85 99234-1437|1
+|326526550|União Hospitalar|07.978.401/0001-60|contato@uniaohospitalar.com|Rua Barao do Rio Branco, 1915|85 99166-8954|1
+== Estrutura para tabela itens
+
+|------
+|Coluna|Tipo|Nulo|Padrão
+|------
+|//**idItens**//|int(11)|Não|
+|QuantItens|decimal(10,0)|Não|
+|QuantItensVend|decimal(10,0)|Não|
+|ValCompItens|decimal(10,2)|Não|
+|ValVendItens|decimal(10,2)|Não|
+|DataCompraItens|date|Não|
+|DataVenc_Itens|date|Sim|NULL
+|Produto_CodeRefProduto|int(11)|Não|
+|Fabricante_idFabricante|int(11)|Não|
+|Usuario_idUser|int(11)|Não|
+== Despejando dados para a tabela itens
+
+|1|100|879|7.60|10.30|2024-11-19|2030-07-12|1|326526545|3
+|2|100|222|11.00|12.00|2024-11-19|2025-11-19|2|326526547|4
+|3|50|8|66.78|80.20|2024-11-19|2025-01-10|3|326526544|3
+|4|300|782|150.60|158.62|2024-11-19|2025-12-20|4|326526546|1
+|5|1500|1054|7.50|9.24|2024-11-19|2034-08-26|5|326526543|3
+|6|80|698|13.99|16.44|2024-11-19|2029-05-06|6|1|3
+|7|66|741|7.18|10.20|2024-11-19|2029-05-06|7|326526547|3
+|8|300|451|7.99|12.99|2024-11-19|2035-01-26|8|326526548|3
+|9|800|1456|10.89|13.94|2024-11-19|2034-07-29|9|326526545|2
+|10|50|648|46.90|51.28|2024-11-19|2035-01-26|10|326526543|3
+|11|150|387|32.63|37.63|2024-11-19|2027-11-19|11|326526546|2
+|12|400|1105|8.78|12.66|2024-11-19|2026-12-21|12|1|3
+|13|20|100|28.93|34.50|2024-11-19|2024-12-25|13|326526550|3
+|14|70|54|120.00|124.00|2024-11-19|2026-06-16|14|326526548|3
+|15|40|120|13.51|15.61|2024-11-19|2024-12-05|15|1|3
+|16|13|251|4.69|7.00|2024-11-19|2027-11-19|16|326526548|2
+|17|49|489|5.49|8.39|2024-11-19|2026-05-23|17|326526543|3
+|18|33|95|27.09|35.24|2024-11-19|2034-01-19|18|326526550|3
+|19|30|121|34.50|41.75|2024-11-19|2028-01-29|19|326526549|3
+|20|160|360|41.39|69.20|2024-11-19|2025-02-21|20|326526547|3
+|21|17|33|33.15|42.24|2024-11-19|2028-05-19|21|1|3
+|22|48|69|51.26|71.34|2024-11-19|2029-02-16|22|326526545|3
+|23|180|230|18.09|26.10|2024-11-19|2030-11-19|23|326526544|3
+|24|94|66|58.53|80.80|2024-11-19|2025-11-11|24|326526545|1
+|25|71|563|12.18|16.42|2024-11-19|2025-01-30|25|326526549|3
+|26|126|55|147.44|170.76|2024-11-19|2025-05-20|26|326526545|1
+== Estrutura para tabela produtos
+
+|------
+|Coluna|Tipo|Nulo|Padrão
+|------
+|//**id**//|int(11)|Não|
+|nome|varchar(100)|Não|
+|quantidade|int(11)|Sim|NULL
+|valor|float|Sim|NULL
+|categoria|varchar(100)|Não|
+== Despejando dados para a tabela produtos
+
+|3|APARELHO DE MEDIR GLICOSE ONE TOUCH ULTRA I|50|80|insumos
+|4|SORO RINGER COM LACTATO 500 ML|300|150.6|insumos
+|5|SORO GLICOSADO 5% 250 ML |1500|7.5|insumos
+|6|SORO FISIOLÓGICO 500 ML|80|13.99|insumos
+|7|SONDA ENDO TRAQUEAL N.9,0|66|7.18|insumos
+|8|SERINGA 05 ML – BD |300|7.99|insumos
+|9|SERINGA 20 ML – BD|800|10.89|insumos
+|10|SCALP N° 25 G|50|46.9|insumos
+|11|LUVA DE LÁTEX NATURAL COR VERDE (M) |150|32.63|insumos
+|12|EQUIPO MACRO GOTAS |400|8.78|insumos
+|13|ALGODÃO HIDRÓFILO 500GR |20|28.93|insumos
+|14|ABBOCATH 24G |70|119.75|insumos
+|15|COLETOR DE LIXO PERFUROCORTANTE 13 LITROS|40|13.51|insumos
+|16|CAPTOPRIL 25MG|13|4.69|medicação
+|17|LOSARTANA POTÁSSICA 50MG|49|5.49|medicação
+|18|DIPROPIONATO DE BECLOMETSONA 50MCG|33|27.09|medicação
+|19|FERROPURUM 40MG INJ|30|34.5|medicação
+|20|INSULIINA 100UI/100ML|160|41.39|medicação
+|21|ACETATO DE MEDROXIPROGESTERONA 150MG|17|33.15|medicação
+|22|ALENDRONATO DE SÓDIO 70MG|48|51.26|medicação
+|23|FENERGAN 25MG/2L|180|18.09|medicação
+|24|CARBIDOPA 25MG + LEVODOPA 250MG|94|58.53|medicação
+|25|SINVASTATINA 10MG|71|12.18|medicação
+|26|BROMOPRIDA INJ |126|147.44|medicação
+|34|bata de procedimento cirurgico|456|9.9|insumos
+== Estrutura para tabela representante
+
+|------
+|Coluna|Tipo|Nulo|Padrão
+|------
+|//**idRepresentante**//|int(11)|Não|
+|NomeRepresentante|varchar(75)|Não|
+|TelefoneRepresentante|varchar(16)|Não|
+|EmailRepresentante|varchar(45)|Não|
+|Fabricante_idFabricante|int(11)|Não|
+|Usuario_idUser|int(11)|Não|
+== Despejando dados para a tabela representante
+
+|2|Marina Silva|85998765432|mariana.silva@vendas.com|326526544|3
+|3|Ricardo Santos|85 98754-3210|ricardodrogasil@gmail.com|326526547|3
+|4|Camila Oliveira|85 99876-2143|camilajb@hotmail.com|326526543|3
+|5|Felipe Costa|85 98877-6655|felipcosta@citmedcom.br|326526549|3
+|6|Amanda Ferreira|85 98765-9988|amanda.ferreira@vendasprohospital.com|326526542|2
+|7|Bruno Carvalho|85 99654-3212|repibruno@vendas.com|326526545|3
+|8|Larissa Rocha|85 99988-7766|representlarissa.rocha@yahoo.com|326526546|3
+|9|Thiago Pereira|85 98733-2211|uniaohospthiago@outlook.com|326526550|4
+|10|Juliana Mendes|85988995545|julianavendas@gmail.com|326526548|4
+== Estrutura para tabela usuario
+
+|------
+|Coluna|Tipo|Nulo|Padrão
+|------
+|//**idUser**//|int(11)|Não|
+|Username|varchar(75)|Não|
+|E-mail|varchar(75)|Não|
+|Password|varchar(75)|Não|
+|Dataregistro|date|Não|
+|Permissão|tinyint(4)|Não|
+== Despejando dados para a tabela usuario
+
+|1|Admin|admin@admin.com|21232f297a57a5a743894a0e4a801fc3|2024-11-07|1
+|2|Marcelle|marcelinamoura3@gmaill.com|0000|2024-11-19|1
+|3|Marcos|marcosazvd@hotmail.com|00|2024-11-19|1
+|4|Gestão|gestao.interna@medca.com|00|2022-05-07|1
